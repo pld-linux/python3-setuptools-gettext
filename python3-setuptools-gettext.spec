@@ -6,17 +6,17 @@
 Summary:	Setuptools plugin compiling .po into .mo at build time
 Summary(pl.UTF-8):	Wtyczka setuptools kompilująca pliki .po do .mo na etapie budowania
 Name:		python3-setuptools-gettext
-Version:	0.1.18
+Version:	0.1.20
 Release:	1
 License:	GPL v2+
 Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/s/setuptools-gettext/%{module}-%{version}.tar.gz
-# Source0-md5:	2ba3e2b44b1d383dd69affcb2dbae272
+# Source0-md5:	5da71797e434e8221ea1e8cc563264a6
 URL:		https://github.com/breezy-team/setuptools-gettext
 BuildRequires:	python3-build
 BuildRequires:	python3-installer
-BuildRequires:	python3-modules >= 1:3.9
-BuildRequires:	python3-setuptools >= 1:61.0
+BuildRequires:	python3-modules >= 1:3.10
+BuildRequires:	python3-setuptools >= 1:69.0
 %if "%{_ver_lt %py3_ver 3.11}" == "1"
 BuildRequires:	python3-tomli >= 1.2.1
 %endif
@@ -27,8 +27,7 @@ BuildRequires:	python3-pytest
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 2.044
 Requires:	gettext-tools
-Requires:	python3-modules >= 1:3.9
-Requires:	python3-setuptools >= 61.0
+Requires:	python3-modules >= 1:3.10
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
